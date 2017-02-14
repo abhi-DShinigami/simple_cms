@@ -1,0 +1,19 @@
+<% @page_title = "Delete Subjects" %>
+
+<%= link_to("<< Back to list", subjects_path, :class => 'back-link')%>
+
+<div class = "subjects delete">
+  <h2>Delete Subject</h2>
+  
+  <%= form_for(@subject, :url => subject_path(@subject), :method => 'delete') do |f| %>
+  
+  <p>Are you sure u wanna delete the item?</p>
+  
+  <p class = "reference-name"><%= f.object.name %></p>
+  
+  <div class = "form-button">
+    <%= f.submit("Delete Subject")%>
+  </div>
+  
+  <% end  %>
+</div>
